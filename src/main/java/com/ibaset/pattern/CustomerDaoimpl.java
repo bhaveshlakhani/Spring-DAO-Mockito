@@ -7,9 +7,11 @@ import org.springframework.jdbc.core.JdbcTemplate;
 public class CustomerDaoimpl implements CustomerDao {
 	
 	DataSource datasource;
+	
 	JdbcTemplate jdbcTemplate;
 	
-	public CustomerDaoimpl(DataSource datasource) {
+	public CustomerDaoimpl(DataSource datasource) 
+	{
 		
 		this.datasource=datasource;
 		
@@ -19,10 +21,15 @@ public class CustomerDaoimpl implements CustomerDao {
 		
 		
 		String query = "insert into Customer values(?,?,?,?,?)";
+		
         jdbcTemplate = new JdbcTemplate(datasource);
         
         jdbcTemplate.update(query, id,name,mobile,email,location_id);
-	
+        
+        
+        System.out.println(  jdbcTemplate.getDataSource());
+      
+        
 	}
 
 }

@@ -20,12 +20,11 @@ public class IbasetApp {
 	     
 	        CustomerDao cusDAO = (CustomerDao) context.getBean("CustomerDAOImpl",CustomerDaoimpl.class);
 	        
-	        cusDAO.add(5,"vivek","567836","ibaset@gmail.com",10);
+	        cusDAO.add(10,"abhishek","567836","ib34et@gmail.com",15);
 	        
 	        System.out.println("Successfully added record");
 	        
 	        context.close();
 	        
-   
     }
 }
