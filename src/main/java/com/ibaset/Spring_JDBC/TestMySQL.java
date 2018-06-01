@@ -46,7 +46,7 @@ public class TestMySQL
 		     */
 		
 		
-//jdbc:mysql://localhost:3306/hb_student_tracker?useSSL=false
+  //jdbc:mysql://localhost:3306/hb_student_tracker?useSSL=false
 		
 		
 		   String url="jdbc:mysql://localhost:3306/test";

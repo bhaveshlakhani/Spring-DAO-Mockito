@@ -18,6 +18,8 @@
         <property name="password" value="root" />
    
 	</bean>
+	
+	<bean id="custimpl" class="com.ibaset.Spring_JDBC.ICustomerImpl"></bean>
 
 
 	<bean id="CustomerDAOImpl" class="com.ibaset.Spring_JDBC.CustomerDaoimpl">

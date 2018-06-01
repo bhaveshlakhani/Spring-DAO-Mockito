@@ -15,17 +15,7 @@ public class CustomerDaoimpl implements CustomerDao {
 		
 	}
 
-	public void add(int id, String name, String mobile, String email, int location_id) {
-		
-		
-		String query = "insert into Customer values(?,?,?,?,?)";
-        jdbcTemplate = new JdbcTemplate(datasource);
-        
-        jdbcTemplate.update(query, id,name,mobile,email,location_id);
-	
-	}
-
-	public void add(Customer customer) 
+	public int save(Customer customer) 
 	{
 		
 		String query = "insert into Customer values(?,?,?,?,?)";
@@ -33,8 +23,11 @@ public class CustomerDaoimpl implements CustomerDao {
         
         Object[] inputs = new Object[] {customer.getId(),customer.getName(),customer.getMobile(),customer.getEmail(),customer.getLocation_id()};
         
-        jdbcTemplate.update(query,inputs);
+        int rowsaffetcted=  jdbcTemplate.update(query,inputs);
+        
+        System.out.println(rowsaffetcted);
 		
+		return rowsaffetcted;
 		
 	}
 

@@ -2,12 +2,12 @@ package com.ibaset.Spring_JDBC;
 
 public class Customer {
 
-	int    id;
-	String name;
-	int mobile;
-	String email;
-
-	int location_id;
+	private int id;
+	private String name;
+	private long mobile;
+	private String email;
+	private int location_id;
+	
 
 	public int getId() {
 		return id;
@@ -25,12 +25,12 @@ public class Customer {
 		this.name = name;
 	}
 
-	public int getMobile() {
+	public long getMobile() {
 		return mobile;
 	}
 
-	public void setMobile(int i) {
-		this.mobile = i;
+	public void setMobile(long l) {
+		this.mobile = l;
 	}
 
 	public String getEmail() {

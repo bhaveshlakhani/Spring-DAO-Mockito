@@ -26,16 +26,6 @@ public class App {
 	        
 	      //  cusDAO.add(1,"abhi","88995","Abhi@gmail.com",10);
 	        
-	        Customer c1=new Customer();
-	        
-	        c1.setId(2);
-	        c1.setName("Abhishek");
-	        c1.setMobile(84876785);
-	        c1.setEmail("bahvesh@gmail.com");
-	        c1.setLocation_id(121);
-	      
-	        cusDAO.add(c1);
-	        
 	        System.out.println("Successfully added");
 	        
 	        context.close();

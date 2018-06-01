@@ -17,29 +17,24 @@ public class IbasetApp {
 	
 	public static void main( String[] args )
     {
-        
+		ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		
-		 String confFile = "applicationContext.xml";
-	     ConfigurableApplicationContext context = 
-	                                new ClassPathXmlApplicationContext(confFile);
-	        CustomerDao cusDAO = (CustomerDao) context.getBean("CustomerDAOImpl");
+	        ICustomer customer;
 	        
-	      //  cusDAO.add(1,"abhi","88995","Abhi@gmail.com",10);
+	        customer=context.getBean("custimpl", ICustomerImpl.class);
 	        
-	        Customer c1=new Customer();
+	        try 
+	        {
+				customer.add(12,"bhavesh","8866766995", "bhavesh@gmail.com", 10);
+			}
 	        
-	        c1.setId(2);
-	        c1.setName("Abhishek");
-	        c1.setMobile(84876785);
-	        c1.setEmail("bahvesh@gmail.com");
-	        c1.setLocation_id(121);
-	      
-	        cusDAO.add(c1);
+	        catch (Invalidmobilenumber e)
+	        {
+				e.printStackTrace();
+			}
 	        
 	        System.out.println("Successfully added");
-	        
+	      
 	        context.close();
-	        
-   
     }
 }
