@@ -1,7 +1,6 @@
 package com.ibaset.pattern;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
+
 import java.util.List;
 
 import org.junit.Test;
@@ -36,10 +35,8 @@ public class Mockinteraction
 		 verify(mockOne, never()).add("two");
 
 		 //verify that other mocks were not interacted
-		// verifyZeroInteractions(mockTwo, mockThree);
+		 // verifyZeroInteractions(mockTwo, mockThree);
 
-		 
-	
 	}
 }
 
